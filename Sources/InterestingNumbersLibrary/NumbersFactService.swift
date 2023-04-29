@@ -15,7 +15,7 @@ public final class NumbersFactService {
     }
 
     public enum FetchResult {
-        case success(NumberFact)
+        case success(NumberFact?)
         case dictionary([String: String])
         case failure(Error)
     }
