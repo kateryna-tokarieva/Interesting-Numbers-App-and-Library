@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NumbersFactService {
+public final class NumbersFactService {
     private let session: URLSession
 
     init(session: URLSession = .shared) {
