@@ -15,15 +15,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "InterestingNumbersLibrary"
+            name: "InterestingNumbersLibrary",
+            resources: [.copy("Resources")]
         ),
         .testTarget(
             name: "InterestingNumbersLibraryTests",
             dependencies: ["InterestingNumbersLibrary"],
-            resources: [
-                .copy("Resources/TestResources/validData.json"),
-                .copy("Resources/TestResources/notValidData.json")
-            ]
+            resources: [.copy("Resources/validData.json"),
+                        .copy("Resources/notValidData.json")]
         )
     ]
 )

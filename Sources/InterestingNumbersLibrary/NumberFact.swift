@@ -8,6 +8,6 @@
 import Foundation
 
 public struct NumberFact: Codable, Equatable {
-    public let text: String
-    public let number: Double
+    let text: String
+    let number: Double
 }

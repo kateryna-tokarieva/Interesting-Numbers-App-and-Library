@@ -55,7 +55,7 @@ public final class NumbersFactService {
         }.resume()
     }
 
-    public func parseJSONAsNumberFact(withData data: Data) -> NumberFact? {
+    func parseJSONAsNumberFact(withData data: Data) -> NumberFact? {
         let decoder = JSONDecoder()
         var numberFact: NumberFact?
         do {

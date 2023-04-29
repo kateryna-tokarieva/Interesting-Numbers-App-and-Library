@@ -35,13 +35,13 @@ final class NumberFactServiceTests: XCTestCase {
     // MARK: - Private
     
     private func loadJSONData(fromFile fileName: String) -> Data? {
-        let testBundle = Bundle(for: type(of: self))
-        guard let path = testBundle.path(forResource: "validData", ofType: "json") else {
+        let bundle = Bundle.module
+        guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
             XCTFail("Error finding JSON file: \(fileName)")
             return nil
         }
         do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+            let data = try Data(contentsOf: url)
             return data
         } catch {
             XCTFail("Error loading JSON data: \(error.localizedDescription)")
@@ -49,3 +49,5 @@ final class NumberFactServiceTests: XCTestCase {
         }
     }
 }
+
+
