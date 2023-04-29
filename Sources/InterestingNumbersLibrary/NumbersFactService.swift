@@ -10,7 +10,7 @@ import Foundation
 public final class NumbersFactService {
     private let session: URLSession
 
-    init(session: URLSession = .shared) {
+    public init(session: URLSession = .shared) {
         self.session = session
     }
 
