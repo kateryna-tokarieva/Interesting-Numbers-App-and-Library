@@ -14,13 +14,13 @@ public final class NumbersFactService {
         self.session = session
     }
 
-    enum FetchResult {
+    public enum FetchResult {
         case success(NumberFact)
         case dictionary([String: String])
         case failure(Error)
     }
 
-    func fetchFacts(number: String, completionHandler: @escaping (FetchResult) -> Void) {
+    public func fetchFacts(number: String, completionHandler: @escaping (FetchResult) -> Void) {
         let url = self.searchURL(for: number)
         performRequest(withURL: url) { result in
             switch result {
@@ -55,7 +55,7 @@ public final class NumbersFactService {
         }.resume()
     }
 
-    func parseJSONAsNumberFact(withData data: Data) -> NumberFact? {
+    public func parseJSONAsNumberFact(withData data: Data) -> NumberFact? {
         let decoder = JSONDecoder()
         var numberFact: NumberFact?
         do {
