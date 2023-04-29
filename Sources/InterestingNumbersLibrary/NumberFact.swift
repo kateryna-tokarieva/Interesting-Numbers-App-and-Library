@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NumberFact: Codable, Equatable {
+public struct NumberFact: Codable, Equatable {
     let text: String
     let number: Double
 }
