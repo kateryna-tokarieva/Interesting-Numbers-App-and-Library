@@ -1,3 +1,3 @@
 # InterestingNumbersLibrary
 
-A description of this package.
+Worked on library creation skills.
